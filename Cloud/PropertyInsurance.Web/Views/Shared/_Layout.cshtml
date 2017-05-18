@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", required:false)
+</head>
+<body>
+    <div class="navbar navbar-height clear">
+        <div class="logo navbar-height">
+            <img src="~/Content/images/navbar/Logo-contoso-blue.svg" />
+            <span>Contoso Insurance</span>
+        </div>
+        <div class="container">
+            <ul class="navbar-left navbar-paddingtop nav-bar-content">
+                @RenderSection("navbar", required: false)
+            </ul>
+            @Html.Partial("_LoginPartial")
+            <ul class="navbar-right navbar-paddingtop">
+                <li class="searchBtn"><img src="@Url.Content("~/Content/images/navbar/Search.svg")" /></li>
+                <li class="noteBtn"><img  src="@Url.Content("~/Content/images/navbar/Messages.svg")" /></li>
+                <li class="syncBtn">
+                    <span>&nbsp;</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

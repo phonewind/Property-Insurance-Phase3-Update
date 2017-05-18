@@ -1,0 +1,226 @@
+﻿@font-face {
+   font-family: 'DIN1451';
+    src: url('../fonts/din1451alt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: 'Segoe MDL2 Assets';
+    src: url('../fonts/segoe-mdl2-assets.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Segoe UI,Segoe UI Semilight";
+    font-weight: 350;
+    src: local("Segoe UI Semilight"), local("Segoe UI");
+}
+
+@font-face {
+   font-family: 'Karla-Regular';
+    src: url('../fonts/Karla-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla-Bold';
+    src: url('../fonts/Karla-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fix-float{*zoom:1;}
+.fix-float:after{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+
+body {
+    padding-bottom: 20px;
+    min-width: 1820px;
+    overflow-x: scroll;
+    font-family:Karla-Regular;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+a,a:hover {text-decoration:none;}
+.clear{clear: both;}
+.container{max-width:none;}
+
+.text-blue{color:#28AAE1;}
+/*nav*/
+.navbar{background-color: #080A36;color:rgb(255,255,255);line-height:19.2px;font-size:16px;font-family:Karla-Regular;margin-bottom:0;min-height:0;border:0;border-radius:0;font-family:"Segoe UI","Segoe WP","Helvetica Neue",Tahoma,"Lucida Grande",Helvetica,sans-serif;}
+.navbar-paddingtop{padding-top:12px;}
+.navbar-height{height:48px;}
+.navbar .logo{display:inline-block;vertical-align: top;border-right:1px solid #4A4A4A;float:left;width: 249px;}
+.navbar .logo >span{margin-left:14px;font-size:1.25em;font-family:"Segoe UI,Segoe UI Semilight";}
+.navbar .logo>img{width:48px;height:48px;}
+.navbar .container{max-width:none;}
+.navbar .container ul{list-style:none;}
+.navbar .container ul li{display: inline;list-style-type: none;padding-left:17px;padding-right:17px;}
+.navbar .container .navbar-left{padding-left:19px;}
+.navbar .container .navbar-left span{font-size:0.88em;color:rgb(255,255,255);font-size:16px;margin-right:6px;}
+.navbar .container .navbar-left span > img{width:16px;margin-left: 1px;margin-right: 8px;}
+.navbar .container .navbar-right{float:right;margin-right: 23px;}
+.navbar .container .navbar-right .noteBtn{}
+.navbar .container .navbar-right .syncBtn{width:20px;cursor:pointer;}
+.navbar .container .navbar-right .syncBtn>span::before{content: '\e895';font-family: 'Segoe MDL2 Assets';position: absolute;
+    top: 14px;}
+.navbar .container ul.navbar-right li >img{fill:#374F73;width: 20px;}
+.navbar .container .nav-logout{border-left:1px solid #4A4A4A;width:165px;display: inline-block;float:right;padding-top:4px;padding-left:11px;padding-right:0px;}
+.navbar .container .nav-logout >div{display:inline-block;}
+.navbar .container .nav-logout >div.btn{width:55px;cursor:pointer;padding: 5px 5px 5px 5px;}
+.navbar .container .nav-logout >div.btn > img{fill:#374F73;width: 20px;}
+.navbar .container .nav-logout >div.btn.question {width:40px;padding-left:0;}
+.navbar .container .nav-logout >div.btn.question > img{width: 11px;}
+.navbar .container .nav-logout >div.profile{width:25%;}
+.navbar .container .nav-logout >div.profile>img{border-radius:5px;height:30px;width:30px;border-radius:25px;margin-top: 4px;
+    margin-left: 6px;}
+
+/*left menu*/
+.body-content {margin-top: -20px;clear:both;}
+.body-content .leftMenu{background-color:#141847;display:inline-block;float:left;color:#fff;width:220px;min-height: 1455px;}
+.body-content .leftMenu.manager{min-height: 1485px;}
+.body-content .leftMenu.adjuster{min-height: 1455px;}
+.body-content .leftMenu.claim-list,.body-content .leftMenu.builder-list{min-height: 1290px;}
+.body-content .leftMenu ul{list-style:none;padding-left:0;}
+.body-content .leftMenu ul:nth-child(1){margin-top: 2px;margin-bottom: 0;}
+.body-content .leftMenu ul:nth-child(2){margin-top: 21px;}
+.body-content .leftMenu ul img.menu-icon{width: 24px;}
+.body-content .leftMenu ul li{padding-top:10px;padding-bottom:10px;font-family:Karla-Regular;font-size:16px;line-height:31px;padding-left:58px;cursor:pointer;}
+.body-content .leftMenu ul li.hamburger{padding-left:20px}
+.body-content .leftMenu ul li.menu-title{color:rgb(25,38,58);font-family:Karla-Bold;text-transform:uppercase;line-height:13.2px;letter-spacing:0.05em;font-size:11px;}
+.body-content .leftMenu ul li.menu-selected{background-color:#2C3263;clear:both;}
+.body-content .leftMenu ul li img.claim-icon{width:33px;height:19px;float: right;}
+.body-content .leftMenu ul.menu-nav li.with-img{padding-left:20px;}
+.body-content .leftMenu ul.menu-nav li.with-img img{width:28px;margin-right: 10px;}
+.body-content .leftMenu ul.menu-nav li.menu-selected.with-img.builders img{width: 20px;margin-left: 3px;margin-right: 15px;}
+.body-content .leftMenu ul.menu-nav li::before{color:#fff;font-family: 'Segoe MDL2 Assets';position:absolute;left:24px;}
+.body-content .leftMenu ul.menu-nav li.dashboard::before{content: '\e80f';}
+.body-content .leftMenu ul.menu-nav li.claims::before{content: '\E133';}
+.body-content .leftMenu ul.menu-nav li:last-child{padding-right:40px;}
+.body-content .content-main{width:auto; min-height:1100px;}
+
+/*content*/
+.body-content .padding-left{padding-left:370px;}
+.body-content .max-width{max-width:1566px;}
+.body-content .content-main{width:auto;}
+.body-content .content-breadcrumb{height:41px;padding-top:10px;font-family:Karla-Regular;color:#A8A8A8;padding-right:25px;border-bottom:1px solid #EBEBEA;}
+.body-content .content-breadcrumb .btns{height:57px;display:inline-block;float:right;}
+.body-content .content-breadcrumb .btns > a:first-child{margin-right:30px;}
+.body-content .content-claimId{color:#435A7C;font-family: Karla-Regular;font-size: 25px;padding-top: 17px;padding-bottom:16px;}
+.body-content .content-operation-area{height:43px;}
+.body-content .content-operation-area .operation-container{background-color:#D4EEF9;height:43px;padding-top:10px;padding-left:20px;border-radius:5px;}
+.body-content .content-operation-area .operate-button{display:inline-block;margin-right:30px;cursor:pointer;}
+.body-content .content-core>div{display:inline-block;vertical-align:top;}
+
+.body-content .content-core-left{width:784px;margin-right: 30px;}
+.body-content .content-core-left .content-claim{border:2px solid #F0F0F0;border-radius:10px;padding-bottom: 13px;width: 779px;}
+.body-content .content-core-left .content-claim .title{color:#374F73;font-family:Karla-Regular;font-size:18px;margin-top: 9px;margin-bottom: 9px;padding-left:14px;}
+.body-content .content-core-left .content-claim .bottom > div{display:inline-block;vertical-align:top;}
+.body-content .content-core-left .content-claim .bottom .claim-info{width:375px;padding-left:14px;padding-right:10px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .claim-rating{width:355px;background-color:rgba(40,170,225,0.2); border-radius:4px;font-size:11px;padding-bottom:10px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .claim-rating .title{color:#FFFFFF;display: block;background-image:url("images/Contoso-Insurance-Info-Icon.svg");background-repeat: no-repeat;
+    background-size: 12px 12px;background-position: 26px 12px;background-color:#28AAE1;text-transform:uppercase;border-top-left-radius: 4px;border-top-right-radius: 4px; margin:0;padding: 4px 0 6px 55px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .claim-rating .title>span{font-size:9pt;}
+.body-content .content-core-left .content-claim .bottom .claim-info .claim-rating ul{padding-left:24px;padding-right:15px;list-style-type: none;padding-top: 12px;margin-bottom: 0;padding-bottom: 7px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .claim-rating ul li{background-image:url("images/bullet.svg");font-family:Karla-Bold;color:#374f73;font-size:14px;background-repeat:no-repeat;background-size: 7px 7px;background-position: 0px 2px;padding-left: 15px;margin-bottom:5px;padding-left:30px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .claim-rating ul li:first-child{background-image:url("images/Contoso-Insurance-Insights-Section-Money-Icon.svg");background-size: 16px 16px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .claim-rating ul li:nth-child(2){background-image:url("images/Contoso-Insurance-Insights-Section-Claim-Icon.svg");background-size: 16px 16px;}
+.body-content .content-core-left .content-claim .bottom .claim-info >ul{list-style:none;padding-left:0;}
+.body-content .content-core-left .content-claim .bottom .claim-info >ul>li:first-child{margin-top:13px;margin-bottom:18px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .property-value{margin-top:-2px;margin-bottom:20px;}
+.body-content .content-core-left .content-claim .bottom .claim-info >ul>li:last-child>div.property-value{margin-top:-4px;}
+.body-content .content-core-left .content-claim .bottom .claim-info .property-value.status{text-transform:capitalize;}
+.body-content .content-core-left .content-claim .bottom .claim-img{width:373px;margin-left:7px;}
+.body-content .content-core-left .content-claim .bottom .claim-img > img{width:373px;height:395px;border-radius:4px;}
+
+/*power bi*/
+/*.body-content .content-core-left .power-bi-report{margin-top:35px;border: 2px solid #F0F0F0;border-radius: 10px;}
+.body-content .content-core-left .power-bi-report.manager{visibility:visible;}
+.body-content .content-core-left .power-bi-report.adjuster{visibility:hidden;}
+.body-content .content-core-left .power-bi-report .title {padding-top:10px;padding-left:11px;padding-bottom:5px; font-size: 18px;}
+.body-content .content-core-left .power-bi-report a,
+.body-content .content-core-left .power-bi-report a:focus,
+.body-content .content-core-left .power-bi-report a:hover,
+.body-content .content-core-left .power-bi-report a:visited { color:#374F73; }
+.body-content .content-core-left .power-bi-report .graph{ width:380px;display:inline-block; margin: 5px 0; padding-left: 11px; text-align:center;}
+.body-content .content-core-left .power-bi-report .graph first-child{margin-right: 15px;}
+.body-content .content-core-left .power-bi-report .graph img{width:370px;height:194px;}*/
+
+.body-content .content-core-right{width:380px;}
+.body-content .content-core-right .other-content{background-color:#E6E6E5;border-radius:5px;margin-bottom:20px;padding-left:10px;padding-right:10px; font-family:Karla-Regular;color:rgb(55,79,115);height:619px;}
+.body-content .content-core-right .other-content .content-policy-holder{padding-top: 10px;}
+.body-content .content-core-right .other-content .content-policy-holder >span{font-size:18px;}
+.body-content .content-core-right .other-content .content-policy-holder .property-name{margin-top:8px;}
+.body-content .content-core-right .other-content .content-map{padding-top:24px;}
+.body-content .content-core-right .other-content .content-map img{width:360px;height:221px;border-radius:5px;}
+.body-content .content-core-right .other-content .content-address {margin-top:30px;}
+.body-content .content-core-right .other-content .content-date-from {margin-top:30px;}
+.body-content .content-core-right .other-content .content-images-history {margin-top:30px;}
+.body-content .content-core-right .other-content .content-images-history img {width:80px;height:80px;margin-right:10px;border-radius:3px;}
+.body-content .content-core-right .other-content .content-images-history .property-value {padding-top:12px;}
+.body-content .content-core-right .content-agent{background-color:#E6E6E5;border-radius:5px;margin-top:35px;padding-left:10px;padding-right:10px;color:rgb(55,79,115);font-family:Karla-Regular;height:90px;padding-top: 8px;}
+.body-content .content-core-right .content-agent>span{font-size:18px;}
+.body-content .content-core-right .content-agent>span{font-size:18px;}
+.body-content .content-core-right .content-agent .agent-thumb{display:inline-block;width:14%;vertical-align: top;}
+.body-content .content-core-right .content-agent .agent-thumb>img{width:42px;height:42px;}
+.body-content .content-core-right .content-agent .agent-detail{display:inline-block;width:55%;}
+
+/*footer*/
+footer{
+    margin-top: 40px;
+    height: 60px;
+    padding-left: 259px;
+    color: #19263a;
+}
+.body-content .claim-list footer{margin-top:360px;padding-left:0;background-position-x:0;}
+
+/*context menu*/
+/*.context-menu{position: absolute;width: 210px;height: 150px;left: -162px;border-radius: 4px;z-index: 2;box-shadow: 0px 0px 10px #888888, 0px 0px 10px #888888;background-color: #F5F5F5;padding: 20px 15px 0 15px;}
+.context-menu .item{padding-bottom: 11px;padding-left: 15px;}
+.context-menu .item:hover{background-color:#EDEDED;}
+.context-menu .item.split-line{border-bottom:1px solid #EDEDED;margin-bottom:8px;}
+.context-menu .item.split-line:hover{background-color:#F5F5F5;}
+.claim-list.builder-list .context-menu .item:last-child{background-image: url(images/flag-icon.svg);background-repeat: no-repeat;background-size: 15px 15px;background-position: 15px 5px;padding-left: 40px;}
+*/
+
+/*.body-content .claim-list .content-claim-history tr.history-tr{cursor:pointer;}
+.body-content .claim-list .content-breadcrumb{font-size:14.2px;color:rgb(153,153,153);line-height:17px;letter-spacing:0em;}
+.body-content .claim-list .content-claimId{font-size:34px;color:rgb(55,79,115);}
+.body-content .claim-list .content-operation-area .operation-container{padding-top: 7px;padding-left: 5px;}
+.body-content .claim-list .content-operation-area input{width:237px;height:31px;border-radius:5px;border:0px;background-image:url("images/Contoso-Insurance-Misc-Icons_SEARCH.png");background-size: 15px 15px;background-repeat: no-repeat;background-position: 10px;padding-left: 35px;}
+.body-content .claim-list .content-operation-area .operate-button.filter{margin-left:30px;}
+.body-content .claim-list .content-operation-area .operate-button.filter img{width:13px;margin-right:2px;}
+.body-content .claim-list .content-core-left {width:774px;margin-right: 3px;}
+.body-content .claim-list .content-core-right{padding-top: 12px;position: relative;margin-top: 30px;margin-left: 14px;width: 383px;}
+.body-content .claim-list .content-core-right span{font-family:Karla-Regular;font-size:18px;color:#374F73;margin-left: 30px;}
+.body-content .claim-list .content-core-right .content-cover{background-color:rgba(230,230,229,0.65);width:381px;height:291px;position:absolute;top:0;margin-left: 20px;border-radius: 5px;}
+.body-content .claim-list .content-core-right img{width:360px;height:221px;margin-left: 31px;margin-top: 5px;border-radius:6px;}
+*/
+
+/*.body-content .claim-list.builder-list .content-core{margin-top:17px;}
+.body-content .claim-list.builder-list .content-core-left{width:1195px;}
+.body-content .claim-list.builder-list .content-claim-history thead tr{height: 37px;vertical-align: top;}
+.body-content .claim-list.builder-list .content-claim-history tr.history-tr.highRisk{background-color:#F4F073;}
+.body-content .claim-list.builder-list .content-claim-history tr.history-tr.highRisk td{border-color:#F4F073;}
+.body-content .claim-list.builder-list .content-claim-history tr.history-tr.highRisk .risk-td{background-image: url(images/warning-icon.svg);background-repeat: no-repeat;background-position: 11px 16px;background-size: 12px 12px;padding-left: 27px;}
+.body-content .claim-list.builder-list .content-claim-history tr.history-tr .selected{background-color:#dbd86d;border-color:#dbd86d;}*/
