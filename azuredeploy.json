@@ -462,7 +462,7 @@
             "ida:ClientId": "[parameters('AADClientId')]",
             "ida:ClientSecret": "[parameters('AADClientSecret')]",
             "ida:Domain": "[parameters('B2CDomainname')]",
-            "ClaimApproverUrl": "[listCallbackURL(concat(resourceId('Microsoft.Logic/workflows/', variables('workflowsPushNotificationName')), '/triggers/manual'), '2016-06-01').value]",
+            "ClaimApproverUrl": "",
             "command": "Cloud\\PropertyInsurance.Web\\deploy.cmd"
           }
         },
