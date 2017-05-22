@@ -832,7 +832,7 @@
       "kind": "ComputerVision",
       "name": "[parameters('accounts_CSCreateInPortal_name')]",
       "apiVersion": "2016-02-01-preview",
-      "location": "westus",
+      "location": "resourceGroup().location",
       "properties": { },
       "dependsOn": [ ]
     },
@@ -844,7 +844,7 @@
       "location": "[resourceGroup().location]",
       "properties": {
         "api": {
-          "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', 'westus', '/managedApis/', 'cognitiveservicescomputervision')]"
+          "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', 'resourceGroup().location', '/managedApis/', 'cognitiveservicescomputervision')]"
         },
         "displayName": "Cognitive Services Computer Vision",
         "parameterValues": {
