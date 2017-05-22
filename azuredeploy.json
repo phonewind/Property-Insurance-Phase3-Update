@@ -832,7 +832,7 @@
       "kind": "ComputerVision",
       "name": "[parameters('accounts_CSCreateInPortal_name')]",
       "apiVersion": "2016-02-01-preview",
-      "location": "resourceGroup().location",
+      "location": "[resourceGroup().location]",
       "properties": { },
       "dependsOn": [ ]
     },
@@ -1142,5 +1142,5 @@
       }
     }
   ],
-  "outputs": {}
+  "outputs": { }
 }
