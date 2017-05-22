@@ -1,6 +1,6 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
   "parameters": {
     "accounts_CSCreateInPortal_name": {
       "defaultValue": "CSCreateInPortal",
@@ -40,13 +40,6 @@
       "metadata": {
         "description": "The domain name of Azure Active Directory B2C that you wish to create"
       }
-    },
-    "hostingPlanName": {
-      "type": "string",
-      "metadata": {
-        "description": "The hosting service plan name that you wish to create."
-      },
-      "defaultValue": "PropertyInsurance"
     },
     "workflows_customer_submit_claim_name": {
       "defaultValue": "customer-submit-claim",
@@ -489,7 +482,7 @@
         }
       ],
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
+        "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_PropertyInsurancefunctionapp_name'))]",
         "[resourceId('Microsoft.Storage/storageAccounts/',  parameters('storageAccounts_propertyinsurance_name'))]"
       ]
     },
