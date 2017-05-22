@@ -669,7 +669,7 @@
       "type": "Microsoft.Logic/workflows",
       "name": "[variables('workflowsApprovePictureName')]",
       "apiVersion": "2016-06-01",
-      "location": "westus",
+      "location": "[resourceGroup().location]",
       "properties": {
         "state": "Enabled",
         "definition": {
@@ -822,6 +822,7 @@
         "[resourceId('Microsoft.Logic/workflows/', variables('workflowsSendMailName'))]"
       ]
     },
+    // cognitive service account
     {
       "comments": "CSCreateInPortal'.",
       "type": "Microsoft.CognitiveServices/accounts",
@@ -835,6 +836,7 @@
       "properties": { },
       "dependsOn": [ ]
     },
+    //computer vision connect
     {
       "type": "MICROSOFT.WEB/CONNECTIONS",
       "apiVersion": "2016-06-01",
@@ -961,6 +963,7 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/sites',variables('functionAppName'))]",
+        "[resourceId('Microsoft.Web/Sites/sourcecontrols', variables('functionAppName'), 'web')]",
         "[resourceId('Microsoft.Web/connections', 'cognitiveservicescomputervision')]"
       ]
     },
