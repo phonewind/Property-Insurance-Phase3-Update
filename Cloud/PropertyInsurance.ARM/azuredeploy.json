@@ -80,8 +80,8 @@
         "description": "The application client secret that you registered under Azure Active Directory B2C domain"
       }
     },
-    "accounts_CSCreateInPortal_name": {
-      "defaultValue": "CSCreateInPortal",
+    "Cognitive Services": {
+      "defaultValue": "Cognitive Services",
       "type": "string"
     },
     "workflows_customer_submit_claim_name": {
@@ -830,7 +830,7 @@
         "name": "F0"
       },
       "kind": "ComputerVision",
-      "name": "[parameters('accounts_CSCreateInPortal_name')]",
+      "name": "[parameters('Cognitive Services')]",
       "apiVersion": "2016-02-01-preview",
       "location": "[resourceGroup().location]",
       "properties": { },
@@ -848,7 +848,7 @@
         },
         "displayName": "Cognitive Services Computer Vision",
         "parameterValues": {
-          "apiKey": "[listKeys(resourceId('Microsoft.CognitiveServices/accounts', parameters('accounts_CSCreateInPortal_name')), providers('Microsoft.CognitiveServices', 'accounts').apiVersions[0]).key1]"
+          "apiKey": "[listKeys(resourceId('Microsoft.CognitiveServices/accounts', parameters('Cognitive Services')), providers('Microsoft.CognitiveServices', 'accounts').apiVersions[0]).key1]"
         }
       }
     },
